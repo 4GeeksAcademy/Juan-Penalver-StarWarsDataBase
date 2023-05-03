@@ -15,7 +15,7 @@ class Person(Base):
     last_name = Column(String(250), nullable=False)
     email = Column(String(200), nullable=False)
     password = Column(String(200), nullable=False)
-    created_date = Column(DateTime) 
+    current_time = Column(DateTime, default=datetime.now, onupdate=datetime.now)
 
 class Planets(Base):
     __tablename__ = 'planets'
